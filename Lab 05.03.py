@@ -50,12 +50,8 @@ class SinglyLinkedList():
     def insert_front(self, fontdata):
         """front"""
         pnew = DataNode(fontdata)
-        if not self.head:
-            self.head = pnew
-        else:
-            front = self.head
-            self.head = pnew
-            self.head.set_next(front)
+        pnew.set_next(self.head)
+        self.head = pnew
         self.count += 1
 
 def main():
